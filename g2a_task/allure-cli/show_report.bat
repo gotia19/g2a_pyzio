@@ -1,0 +1,17 @@
+@ECHO off
+SET "ALLURE_DIR="
+SET "DEFAULT_ALLURE_RESULT_DIR=allure-report"
+
+ECHO LOOKING FOR %DEFAULT_ALLURE_RESULT_DIR% EVERYWHERE IN THE PROJECT...
+
+FOR /d /r ".." %%a in (*) do if not defined ALLURE_DIR if /i "%%~nxa"=="%DEFAULT_ALLURE_RESULT_DIR%" SET "ALLURE_DIR=%%a"
+IF "%ALLURE_DIR%."=="." (
+    ECHO NO REPORT FOUND - EXITING
+    GOTO End
+)
+ECHO REPORT FOUND HERE: [%ALLURE_DIR%]
+CALL app\bin\allure report open --report-dir "%ALLURE_DIR%" < nul
+:End
+ECHO SCRIPT WILL EXIT IN 5 SEC
+TIMEOUT 5 > NUL
+EXIT

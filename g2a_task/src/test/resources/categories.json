@@ -1,0 +1,76 @@
+[
+  {
+    "name": "Known bugs",
+    "matchedStatuses": [
+      "skipped",
+      "failed"
+    ],
+    "messageRegex": "^(.*\\[KNOWN BUG\\].*)*$"
+  },
+  {
+    "name": "App does not comply doc",
+    "matchedStatuses": [
+      "skipped",
+      "failed"
+    ],
+    "messageRegex": "^(.*\\[APP DOES NOT COMPLY DOC\\].*)*$"
+  },
+  {
+    "name": "Temporary off",
+    "matchedStatuses": [
+      "skipped",
+      "failed"
+    ],
+    "messageRegex": "^(.*\\[TEMPORARY OFF\\].*)*$"
+  },
+  {
+    "name": "Ignored tests",
+    "matchedStatuses": [
+      "skipped"
+    ],
+    "messageRegex": "^((?!\\[KNOWN BUG\\]|\\[APP DOES NOT COMPLY DOC\\]|\\[TEMPORARY OFF\\]).)*$"
+  },
+  {
+    "name": "Application or System Issue",
+    "matchedStatuses": [
+      "broken"
+    ],
+    "traceRegex": ".*org.openqa.selenium.WebDriverException: Reached error page:.*"
+  },
+  {
+    "name": "Test defects",
+    "matchedStatuses": [
+      "broken"
+    ],
+    "traceRegex": "^org.openqa.selenium.WebDriverException: Reached error page:.*"
+  },
+  {
+    "name": "Test development not finished",
+    "matchedStatuses": [
+      "failed"
+    ],
+    "messageRegex": ".*Test case is not implemented.*"
+  },
+  {
+    "name": "Selenium issues",
+    "matchedStatuses": [
+      "failed"
+    ],
+    "messageRegex": "Unable to create connections to selenium grid"
+  },
+  {
+    "name": "Product defects",
+    "matchedStatuses": [
+      "failed"
+    ],
+    "messageRegex": "^Test case is not implemented.*",
+    "traceRegex": "^Unable to create connections to selenium grid.*"
+  },
+  {
+    "name": "Outdated tests",
+    "matchedStatuses": [
+      "broken"
+    ],
+    "traceRegex": ".*Element 'By.cssSelector.*was not found.*"
+  }
+]

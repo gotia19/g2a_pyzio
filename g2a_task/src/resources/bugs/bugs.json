@@ -1,0 +1,20 @@
+[
+  {
+    "issue": "",
+    "issueStatus": "TEMPORARY OFF",
+    "message": "Unfinished test",
+    "tests": [
+      "*"
+    ]
+  },
+  {
+    "issue": "JIRA-9991",
+    "issueStatus": "KNOWN BUG",
+    "message": "Deactivated element is not visible",
+    "tests": [
+      "JIRA-1720",
+      "JIRA-1724",
+      "JIRA-1725"
+    ]
+  }
+]
